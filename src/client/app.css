@@ -1,0 +1,52 @@
+.wrapper {
+  max-width: 1080px;
+  margin: auto;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: row;
+}
+
+textarea {
+  resize: none;
+  min-height: 70vh;
+}
+
+.landingContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 70vh;
+  justify-content: space-between ;
+  gap: 20px;
+}
+
+.container {
+  width: 50%;
+}
+
+.error {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+.cardRow {
+  width: 100%;
+  height: calc(70vh/5);
+  flex: 1;
+}
+
+.image {
+  height: 100%;
+  object-fit: cover;
+}
+
+.header {
+  margin-bottom: .5rem;
+}
+
+.img-wrapper {
+  width: 30%;
+}
