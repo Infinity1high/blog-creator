@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Card, CardImg, CardBody, CardText, CardTitle } from 'reactstrap';
+import { Card, CardImg, CardBody, CardText, CardTitle, Alert } from 'reactstrap';
+import Error from './Error';
 
 const ImageText = ({ imageURL, text, title, leftToRight }) => {
   const customStyle = { flexDirection: leftToRight ? 'row' : 'row-reverse' };
@@ -12,9 +13,10 @@ const ImageText = ({ imageURL, text, title, leftToRight }) => {
       <CardBody>
         <CardTitle tag="h5">{title}</CardTitle>
         <CardText>
-            {text}
+          {text}
         </CardText>
       </CardBody>
+       {!imageURL && <Error />}
     </Card>
   );
 };

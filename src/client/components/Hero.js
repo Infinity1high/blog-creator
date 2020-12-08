@@ -1,10 +1,15 @@
 import React from 'react';
 
-import { Card, CardImg } from 'reactstrap';
+import { Card, CardImg, Alert } from 'reactstrap';
+import Error from './Error';
 
 const Hero = ({ imageURL }) => (
   <Card className="cardRow">
-    <CardImg width="90%" src={imageURL} className='image'/>
+    {imageURL ? (
+      <CardImg width="90%" src={imageURL} className="image" />
+    ) : (
+      <Error />
+    )}
   </Card>
 );
 

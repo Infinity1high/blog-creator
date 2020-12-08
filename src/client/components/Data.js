@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getData } from '../store/actions/getDataActions';
 
 import { Card } from 'reactstrap';
+import Error from './Error';
 
 const Data = ({ url }) => {
   const dispatch = useDispatch();
@@ -17,6 +18,7 @@ const Data = ({ url }) => {
         {data &&
           data.entries.slice(0, 3).map(item => <li key={item.Description}>{item.Description}</li>)}
       </ul>
+        {!url && <Error />}
     </Card>
   );
 };
